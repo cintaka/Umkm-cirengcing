@@ -4,236 +4,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SuwirCing, cireng isi ayam suwir Original dan Balado.">
-    <meta name="theme-color" content="#087fbd">
-
     <title>SuwirCing | Cireng Isi Ayam Suwir</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+    <!-- EMOT BIRU MELAYANG -->
+    <div class="floating-emojis">
+        <span>🩵</span>
+        <span>🫧</span>
+        <span>💧</span>
+        <span>☁️</span>
+        <span>💙</span>
+        <span>⭐</span>
+        <span>🩵</span>
+        <span>🫧</span>
+        <span>💎</span>
+        <span>💧</span>
+        <span>🦋</span>
+        <span>🌊</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
         <nav class="navbar">
-
-            <!-- LOGO HEADER -->
             <a href="#home" class="logo">
-                <img
-                    src="assets/LogoSuwircing.jpg"
-                    alt="Logo SuwirCing"
-                    class="logo-img"
-                >
-                <span>Suwir<span class="biru">Cing</span></span>
+                <img src="assets/LogoSuwircing.jpg" alt="Logo SuwirCing">
+                <span>SuwirCing</span>
             </a>
-
-            <button
-                class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Buka menu"
-                aria-expanded="false">
-                ☰
-            </button>
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#produk">Produk</a></li>
+                <li><a href="#galeri">Galeri</a></li>
                 <li><a href="#tentang">Tentang Kami</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
 
+            <button class="menu-toggle" id="menu-toggle">☰</button>
         </nav>
     </header>
 
-    <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="label">🩵 Camilan Lezat dan Nikmat 🩵</p>
+            <h1>Selamat Datang di <span>SuwirCing!</span></h1>
+            <p>
+                Cireng isi ayam suwir yang renyah di luar,
+                gurih dan nikmat di dalam.
+            </p>
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+    </section>
 
-        <!-- HOME -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <p class="label">Camilan Favoritmu!</p>
+    <!-- PRODUK -->
+    <section class="section" id="produk">
+        <div class="section-heading">
+            <p class="label">🫧 Menu Kami 🫧</p>
+            <h2>Produk SuwirCing</h2>
+            <p>Pilih rasa favoritmu!</p>
+        </div>
 
-                <h1>
-                    Renyah di Luar,<br>
-                    Gurih Ayamnya di Dalam!
-                </h1>
+        <div class="product-container">
 
-                <p class="deskripsi">
-                    Nikmati lezatnya cireng isi ayam suwir
-                    dengan dua pilihan rasa, Original dan Balado.
-                    Cocok untuk teman santai setiap hari!
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#produk" class="btn btn-primary">
-                        Lihat Produk
-                    </a>
-
-                    <a
-                        href="https://wa.me/6282183183747"
-                        class="btn btn-white"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Pesan Sekarang
-                    </a>
-                </div>
+            <div class="product-card">
+                <img src="assets/cireng-original.jpg"
+                     alt="Cireng Original">
+                <h3>Cireng Original</h3>
+                <p>Cireng isi ayam suwir dengan rasa gurih.</p>
+                <h4>Rp5.000</h4>
+                <a href="https://wa.me/6282183183747"
+                   class="btn" target="_blank">Pesan Sekarang</a>
             </div>
 
-            <div class="hero-image">
-                <img
-                    src="assets/LogoSuwircing.jpg"
-                    alt="Logo SuwirCing"
-                    class="gambar-bulat"
-                >
-            </div>
-        </section>
-
-        <!-- PRODUK -->
-        <section class="produk section" id="produk">
-            <div class="section-heading">
-                <p class="label">Menu Pilihan</p>
-                <h2>Produk SuwirCing</h2>
-                <p>Pilih rasa favoritmu dan pesan sekarang!</p>
+            <div class="product-card">
+                <img src="assets/cireng-balado.jpg"
+                     alt="Cireng Balado">
+                <h3>Cireng Balado</h3>
+                <p>Cireng isi ayam suwir dengan rasa pedas balado.</p>
+                <h4>Rp8.000</h4>
+                <a href="https://wa.me/6282183183747"
+                   class="btn" target="_blank">Pesan Sekarang</a>
             </div>
 
-            <div class="produk-container">
+        </div>
+    </section>
 
-                <!-- CIRING ORIGINAL -->
-                <article class="produk-card">
-                    <img
-                        src="assets/cireng-original.jpg"
-                        alt="Foto Cireng Original"
-                        class="produk-img"
-                        loading="lazy"
-                    >
+    <!-- GALERI -->
+    <section class="section galeri" id="galeri">
+        <div class="section-heading">
+            <p class="label">💙 Foto Produk 💙</p>
+            <h2>Galeri SuwirCing</h2>
+            <p>Momen kelezatan SuwirCing!</p>
+        </div>
 
-                    <h3>Cireng Original</h3>
+        <div class="galeri-container">
 
-                    <p>
-                        Cireng renyah dengan isian ayam suwir
-                        yang gurih dan lezat.
-                    </p>
-
-                    <a
-                        class="btn btn-primary"
-                        href="https://wa.me/6282183183747?text=Halo%20SuwirCing%2C%20saya%20ingin%20pesan%20Cireng%20Original."
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Pesan Original
-                    </a>
-                </article>
-
-                <!-- CIRING BALADO -->
-                <article class="produk-card">
-                    <img
-                        src="assets/cireng-balado.jpg"
-                        alt="Foto Cireng Balado"
-                        class="produk-img"
-                        loading="lazy"
-                    >
-
-                    <h3>Cireng Balado</h3>
-
-                    <p>
-                        Cireng isi ayam suwir dengan cita rasa
-                        balado yang nikmat.
-                    </p>
-
-                    <a
-                        class="btn btn-primary"
-                        href="https://wa.me/6282183183747?text=Halo%20SuwirCing%2C%20saya%20ingin%20pesan%20Cireng%20Balado."
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Pesan Balado
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- TENTANG KAMI -->
-        <section class="tentang section" id="tentang">
-            <div class="tentang-image">
-                <img
-                    src="assets/LogoSuwircing.jpg"
-                    alt="Logo SuwirCing"
-                    class="gambar-bulat"
-                    loading="lazy"
-                >
+            <div class="galeri-card">
+                <img src="assets/galeri-1.jpg"
+                     alt="Foto Galeri SuwirCing 1"
+                     loading="lazy">
+                <h3>Kelezatan SuwirCing</h3>
             </div>
 
-            <div class="tentang-content">
-                <p class="label">Kenalan Yuk!</p>
-                <h2>Tentang SuwirCing</h2>
-
-                <p>
-                    SuwirCing menyediakan camilan cireng isi
-                    ayam suwir yang cocok dinikmati bersama
-                    teman dan keluarga. Tersedia rasa Original
-                    dan Balado.
-                </p>
-
-                <div class="info-item">
-                    <span>📍</span>
-                    <div>
-                        <strong>Lokasi</strong>
-                        <p>Bandar Bayu</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <span>🕘</span>
-                    <div>
-                        <strong>Jam Operasional</strong>
-                        <p>Mulai pukul 09.00</p>
-                    </div>
-                </div>
-
-                <div class="info-item">
-                    <span>📱</span>
-                    <div>
-                        <strong>WhatsApp</strong>
-                        <p>082183183747</p>
-                    </div>
-                </div>
+            <div class="galeri-card">
+                <img src="assets/galeri-2.jpg"
+                     alt="Foto Galeri SuwirCing 2"
+                     loading="lazy">
+                <h3>Camilan Favorit</h3>
             </div>
-        </section>
 
-        <!-- KONTAK -->
-        <section class="pesan section" id="kontak">
-            <p class="label label-putih">Pesan Sekarang</p>
+        </div>
+    </section>
 
-            <h2>Yuk, Cobain SuwirCing!</h2>
+    <!-- TENTANG KAMI -->
+    <section class="section tentang" id="tentang">
+        <div class="section-heading">
+            <p class="label">🩵 Tentang Kami 🩵</p>
+            <h2>Apa Itu SuwirCing?</h2>
+        </div>
 
-            <p>Camilan gurih untuk menemani harimu.</p>
+        <div class="about-content">
+            <p>
+                SuwirCing adalah usaha camilan yang menyediakan
+                cireng isi ayam suwir dengan rasa yang lezat.
+                Dibuat dengan bahan pilihan, renyah di luar
+                dan gurih di dalam.
+            </p>
+        </div>
+    </section>
 
-            <a
-                href="https://wa.me/6282183183747"
-                class="btn btn-white"
-                target="_blank"
-                rel="noopener noreferrer">
-                Hubungi Kami via WhatsApp
+    <!-- KONTAK -->
+    <section class="section kontak" id="kontak">
+        <div class="section-heading">
+            <p class="label">💧 Hubungi Kami 💧</p>
+            <h2>Informasi Pemesanan</h2>
+        </div>
+
+        <div class="contact-card">
+            <p><strong>WhatsApp:</strong> 082183183747</p>
+            <p><strong>Lokasi:</strong> Bandar Bayu</p>
+            <p><strong>Jam Operasional:</strong> Mulai pukul 09.00</p>
+
+            <a href="https://wa.me/6282183183747"
+               class="btn" target="_blank">
+                Hubungi WhatsApp
             </a>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2026 SuwirCing. Cireng Isi Ayam Suwir.</p>
-        <p>Renyah di Luar, Gurih Ayamnya di Dalam!</p>
+    <footer>
+        <p>© 2026 SuwirCing. Cireng Isi Ayam Suwir. 💙</p>
     </footer>
 
     <!-- TOMBOL WHATSAPP -->
-    <a
-        href="https://wa.me/6282183183747"
-        class="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Hubungi SuwirCing melalui WhatsApp">
-        ☎
+    <a href="https://wa.me/6282183183747"
+       class="whatsapp" target="_blank"
+       aria-label="Hubungi SuwirCing melalui WhatsApp">
+        WA
     </a>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>
