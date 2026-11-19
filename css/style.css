@@ -4,378 +4,381 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --biru: #087fbd;
-    --biru-tua: #075985;
-    --biru-muda: #8be9f7;
-    --putih: #ffffff;
-    --teks: #294b60;
-}
-
-html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--teks);
-    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    color: #23445b;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
     background: #ffffff;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* HEADER DAN NAVBAR */
-.header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 3px 15px rgba(0, 80, 130, 0.10);
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .navbar {
-    max-width: 1200px;
-    min-height: 82px;
-    padding: 10px 5%;
-    margin: auto;
+    min-height: 75px;
+    padding: 10px 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    align-items: center;
 }
 
-/* LOGO HEADER */
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--biru-tua);
-    font-size: 28px;
-    font-weight: 800;
-    flex-shrink: 0;
+    color: #1676b8;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.logo-img {
-    display: block;
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
     border-radius: 50%;
-    background: #ffffff;
 }
 
-.biru {
-    color: #25a8d5;
-}
-
-/* MENU NAVIGASI */
 .nav-menu {
     display: flex;
-    align-items: center;
     gap: 25px;
     list-style: none;
 }
 
 .nav-menu a {
-    color: var(--teks);
-    font-weight: 600;
-    transition: color 0.3s;
+    text-decoration: none;
+    color: #23445b;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    color: var(--biru);
+    color: #168bd2;
 }
 
 .menu-toggle {
     display: none;
     border: none;
-    border-radius: 10px;
-    background: var(--biru);
-    color: white;
-    padding: 8px 14px;
-    font-size: 25px;
+    background: none;
+    font-size: 28px;
     cursor: pointer;
+    color: #1676b8;
 }
 
-/* HOME */
+/* HERO */
 .hero {
-    min-height: 590px;
-    padding: 60px 7%;
+    min-height: 500px;
+    padding: 80px 8%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 45px;
-    background: linear-gradient(
-        135deg,
-        #8de9f7,
-        #55c9eb,
-        #d9f8ff
-    );
+    background: linear-gradient(135deg, #b9e7ff, #eaf8ff);
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 590px;
+    max-width: 650px;
 }
 
 .label {
-    color: var(--biru);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: #168bd2;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .hero h1 {
-    color: var(--biru-tua);
-    font-size: clamp(32px, 4vw, 47px);
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 42px;
+    color: #15577f;
+    margin-bottom: 15px;
 }
 
-.deskripsi {
-    font-size: 17px;
-    margin-bottom: 25px;
+.hero h1 span {
+    color: #168bd2;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.hero p {
+    margin-bottom: 22px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
-    padding: 12px 22px;
-    border-radius: 40px;
-    border: 2px solid transparent;
-    font-weight: 700;
-    text-align: center;
+    background: #168bd2;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn-primary {
-    background: var(--biru);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--biru-tua);
-}
-
-.btn-white {
-    background: white;
-    color: var(--biru-tua);
-    box-shadow: 0 5px 15px rgba(0, 80, 130, 0.12);
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 430px;
-}
-
-/* GAMBAR UTAMA BULAT */
-.gambar-bulat {
-    display: block;
-    width: 100%;
-    max-width: 340px;
-    aspect-ratio: 1 / 1;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 50%;
-    border: 6px solid white;
-    background: white;
-    box-shadow: 0 12px 30px rgba(0, 80, 130, 0.20);
+    background: #08669f;
+    transform: translateY(-2px);
 }
 
 /* SECTION */
 .section {
-    padding: 75px 7%;
+    padding: 75px 8%;
 }
 
 .section-heading {
     text-align: center;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 }
 
-.section-heading h2,
-.tentang-content h2 {
-    color: var(--biru-tua);
-    font-size: 32px;
-    line-height: 1.3;
-    margin-bottom: 12px;
+.section-heading h2 {
+    font-size: 30px;
+    color: #15577f;
+}
+
+.section-heading p:last-child {
+    color: #61798b;
 }
 
 /* PRODUK */
-.produk {
-    background: #f7fcff;
-}
-
-.produk-container {
-    max-width: 850px;
-    margin: auto;
+.product-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
+    max-width: 850px;
+    margin: auto;
 }
 
-.produk-card {
-    padding: 22px;
-    text-align: center;
+.product-card {
     background: white;
-    border-radius: 22px;
-    border: 1px solid #d8f1fa;
-    box-shadow: 0 8px 25px rgba(0, 80, 130, 0.08);
-    overflow: hidden;
-    transition: transform 0.3s;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-.produk-card:hover {
+.product-card:hover {
     transform: translateY(-5px);
 }
 
-.produk-img {
-    display: block;
+.product-card img {
     width: 100%;
-    height: 230px;
+    height: 220px;
     object-fit: cover;
-    object-position: center;
-    border-radius: 16px;
-    margin-bottom: 18px;
-    background: #eaf9ff;
+    border-radius: 13px;
+    margin-bottom: 15px;
 }
 
-.produk-card h3 {
-    color: var(--biru-tua);
-    font-size: 23px;
+.product-card h3 {
+    color: #15577f;
     margin-bottom: 8px;
 }
 
-.produk-card p {
-    margin-bottom: 20px;
+.product-card h4 {
+    color: #168bd2;
+    font-size: 20px;
+    margin: 12px 0;
 }
 
-/* TENTANG KAMI */
-.tentang {
-    max-width: 1200px;
+/* GALERI */
+.galeri {
+    background: #e3f4ff;
+}
+
+.galeri-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 850px;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 55px;
 }
 
-.tentang-image,
-.tentang-content {
-    flex: 1;
-    min-width: 0;
+.galeri-card {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-.tentang-image {
-    display: flex;
-    justify-content: center;
+.galeri-card:hover {
+    transform: translateY(-5px);
 }
 
-.tentang-content > p:not(.label) {
-    margin-bottom: 22px;
+.galeri-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 13px;
+    display: block;
 }
 
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin: 16px 0;
+.galeri-card h3 {
+    color: #15577f;
+    margin-top: 12px;
 }
 
-.info-item > span {
-    font-size: 25px;
+/* TENTANG */
+.tentang {
+    background: #ffffff;
 }
 
-.info-item strong {
-    color: var(--biru-tua);
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    background: #eaf8ff;
+    border-radius: 15px;
 }
 
 /* KONTAK */
-.pesan {
+.kontak {
+    background: #e3f4ff;
+}
+
+.contact-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
     text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #087fbd, #36bfe5);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
 }
 
-.pesan h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.pesan p:not(.label) {
-    margin-bottom: 24px;
-}
-
-.label-putih {
-    color: white;
+.contact-card p {
+    margin-bottom: 12px;
 }
 
 /* FOOTER */
-.footer {
-    padding: 25px 15px;
+footer {
+    padding: 22px;
     text-align: center;
-    background: #eaf9ff;
-    color: var(--biru-tua);
-    font-size: 14px;
-}
-
-/* WHATSAPP MELAYANG */
-.whatsapp-float {
-    position: fixed;
-    right: 22px;
-    bottom: 22px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #16a34a;
+    background: #15577f;
     color: white;
-    font-size: 30px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.20);
-    z-index: 900;
 }
 
-/* RESPONSIVE HP */
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+/* EMOT BIRU MELAYANG */
+.floating-emojis {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 101;
+}
+
+.floating-emojis span {
+    position: absolute;
+    bottom: -60px;
+    font-size: 25px;
+    opacity: 0.75;
+    animation: emoji-terbang 12s linear infinite;
+}
+
+.floating-emojis span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.floating-emojis span:nth-child(2) {
+    left: 20%;
+    animation-delay: 3s;
+    font-size: 30px;
+}
+
+.floating-emojis span:nth-child(3) {
+    left: 35%;
+    animation-delay: 5s;
+}
+
+.floating-emojis span:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+    font-size: 32px;
+}
+
+.floating-emojis span:nth-child(5) {
+    left: 65%;
+    animation-delay: 4s;
+}
+
+.floating-emojis span:nth-child(6) {
+    left: 78%;
+    animation-delay: 2s;
+}
+
+.floating-emojis span:nth-child(7) {
+    left: 90%;
+    animation-delay: 6s;
+}
+
+.floating-emojis span:nth-child(8) {
+    left: 15%;
+    animation-delay: 7s;
+}
+
+.floating-emojis span:nth-child(9) {
+    left: 55%;
+    animation-delay: 8s;
+}
+
+.floating-emojis span:nth-child(10) {
+    left: 85%;
+    animation-delay: 9s;
+}
+
+/* ANIMASI EMOT */
+@keyframes emoji-terbang {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
-        min-height: 75px;
         padding: 10px 5%;
-    }
-
-    .logo {
-        font-size: 24px;
-        gap: 8px;
-    }
-
-    .logo-img {
-        width: 46px;
-        height: 46px;
     }
 
     .menu-toggle {
@@ -385,114 +388,54 @@ img {
     .nav-menu {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 75px;
         left: 0;
-        right: 0;
-        padding: 18px 6%;
+        width: 100%;
         background: white;
-        box-shadow: 0 8px 15px rgba(0, 80, 130, 0.10);
         flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+        gap: 0;
+        padding: 10px 5%;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.08);
     }
 
     .nav-menu.active {
         display: flex;
     }
 
-    .nav-menu a {
-        display: block;
-        padding: 7px 0;
+    .nav-menu li {
+        padding: 12px 0;
     }
 
     .hero {
-        min-height: auto;
-        padding: 45px 6% 55px;
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
+        min-height: 400px;
+        padding: 60px 7%;
     }
 
     .hero h1 {
-        font-size: 34px;
-    }
-
-    .deskripsi {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-image {
-        width: 100%;
-    }
-
-    .gambar-bulat {
-        max-width: 280px;
+        font-size: 32px;
     }
 
     .section {
         padding: 55px 6%;
     }
 
-    .section-heading h2,
-    .tentang-content h2 {
-        font-size: 28px;
-    }
-
-    .produk-container {
+    .product-container,
+    .galeri-container {
         grid-template-columns: 1fr;
-        max-width: 420px;
     }
 
-    .produk-img {
-        height: 230px;
-    }
-
-    .tentang {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .tentang-image,
-    .tentang-content {
-        width: 100%;
-    }
-
-    .pesan h2 {
-        font-size: 27px;
+    .galeri-card img {
+        height: 220px;
     }
 }
 
-@media (max-width: 380px) {
-    .logo {
-        font-size: 21px;
-    }
-
-    .logo-img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .hero h1 {
-        font-size: 29px;
-    }
-
-    .gambar-bulat {
-        max-width: 235px;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .produk-card {
-        padding: 16px;
-    }
-
-    .produk-img {
-        height: 190px;
+/* MENGURANGI ANIMASI JIKA DIPILIH PENGGUNA */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
     }
 }
